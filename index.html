@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Gem Game!</title>
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	
+	<script src="http://code.jquery.com/jquery-3.1.1.js"
+	integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA="
+	crossorigin="anonymous"></script>	
+	
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+	<script type="text/javascript" src="assets/javascript/game.js"></script>
+</head>
+<body>
+
+	<div class="jumbotron">
+		<h1 class="display-3">Collect the Gems!!</h1>
+		<ul class="lead" id="instructions">Instructions:
+			<li>You'll be given a random number to start the game.</li>
+			<li>By clicking on a gem you will add a specific amount of poits to your total score.</li>
+			<li>Match your score to the random number to win!</li>
+			<li>The gem values with change after each win or loss.</li>
+			<li>Good Luck!</li>
+		</ul>
+	</div>
+
+	<div class="container">
+		<div class="row">
+		<div id="gems" class="col-sm-12"></div>
+		</div>
+	</div>
+		
+		<div class="row">
+		<div class="col-sm-4">
+		<div class="left">
+			<p class="box">Random Number:
+				<br>
+				<span id="number">0</span>
+			</p>
+
+			<p class="box">Your Total Score:
+				<br>
+				<span id="totalScore"></span>
+			</p>
+		</div>
+
+		<div class="row">
+			<p class="box">Wins:
+				<br>
+				<span id="wins">0</span>
+			</p>
+			<p class="box">Losses:
+				<br>
+				<span id="losses">0</span>
+			</p>		
+		</div>
+		</div>
+	</div>
+	</div>
+
+
+
+
+  </script>
+
+</body>
+</html>
