@@ -1,77 +1,63 @@
-
-	var numberToGuess;
-	var counter = 0;
-	var numberOfGems = 4;
-	var wins = 0;
-	var losses = 0;
-
-
 $(document).ready(function(){
+  var numberToGuess
+  var counter = 0
+  var numberOfGems = 4
+  var wins = 0
+  var losses = 0
 
-// gem game image elements
-	
-	for(var i=0; i<numberOfGems; i++){
+  // event handler for clicking a gem
+  $('.gemImage').on("click", function() {
 
-		var imageGem = $("<img>")
+    // add gem number to total
+    var gemNumber = $(this).attr('data-num')
+    counter += parseInt(gemNumber)
 
-			imageGem.attr('src', "assets/images/image" + (i + 1) + ".jpg");
-			imageGem.attr('alt', "gems");
-		imageGem.addClass("gemImage");
-			$("#gems").append(imageGem)
+    // display total
+    $("#totalScore").text(counter)
 
-	}
+    // alert if player won or lost
+    if (counter === numberToGuess) {
+      alert("You won!!!")
+      wins++
+      $('#wins').text(wins)
+      reset()
+    
+    } else if (counter > numberToGuess) {
+      alert("You lost!!!")
+      losses++
+      $("#losses").text(losses)
+      reset()
+    }
+  })
 
-// event handler for clicking a gem
-	
-	$('.gemImage').on("click", function() {
+  function appendGems () {
+    // gem game image elements
+    for(var i = 0; i < numberOfGems; i++){
+      var imageGem = $("<img>")
+      var imageSrc = "assets/images/image" + i + ".jpg"
 
-		// add gem number to total
-		counter = counter + parseInt($(this).data('num'));
+      imageGem.attr('src', imageSrc)
+      imageGem.attr('alt', "gems")
+      imageGem.addClass("gemImage")
 
-		// display total
-		$("#totalScore").text(counter);
+      $("#gems").append(imageGem)
+    }
+  }
 
-	// alert if player won or lost
+  function reset () {
+    counter = 0
+    $("#totalScore").text(counter)
 
-	if (counter === numberToGuess) {
-		alert("You won!!!");
-		wins++;
-		$('#wins').text(wins);
-		reset();
-	
-	}else if(counter > numberToGuess){
-		alert("You lost!!!");
-		losses++;
-		$("#losses").text(losses);
-		reset();
-	}
-});
-	reset();
-});
+    numberToGuess = Math.floor((Math.random() * 120) + 19)
+    $("#number").text(numberToGuess)
 
-function reset () {
+    $("#gems img").each(function(index){
+      var num = Math.floor((Math.random() * 12) + 1)
+      $(this).attr("data-num", num)
+    })
+  }
 
-	counter = 0;
-	numberToGuess = Math.floor((Math.random() * 120) + 19);
-	$("#number").text(numberToGuess);
-	$("#totalScore").text(counter);
+  appendGems()
+  reset()
 
-	$("#gems img").each(function(index){
-		var num = Math.floor((Math.random() * 12) + 1);
-		$(this).attr("data-num", num);
-	});
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+})
