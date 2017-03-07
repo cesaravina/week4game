@@ -1,84 +1,85 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Gem Game!</title>
-	<!-- Latest compiled and minified CSS -->
+  <title>Gem Game!</title>
+  <!-- Latest compiled and minified CSS -->
 
-	<!-- Latest compiled and minified CSS -->
-	<!-- HTTP/S content conflicting w/Heroku -->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <!-- Latest compiled and minified CSS -->
+  <!-- HTTP/S content conflicting w/Heroku -->
+  <link
+    rel="stylesheet"
+    href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+    integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+    crossorigin="anonymous"
+  >
 
-	
-	<script
-	  src="https://code.jquery.com/jquery-3.1.1.js"
-	  integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA="
-	  crossorigin="anonymous"></script>	
-	
-	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
-	<script type="text/javascript" src="assets/javascript/game.js"></script>
+  <link rel="stylesheet" type="text/css" href="assets/css/style.css">
 </head>
 <body>
 
-	<div class="jumbotron">
-		<div class="container text-center">
-		<h1 class="display-3">Collect the Gems!!</h1>
-		<div class="lead" id="instructions">Instructions:
-		 	<hr class="my-4">
-			<p>You'll be given a random number to start the game.</p>
-			<hr class="my-4">
-			<p>By clicking on a gem you will add a specific amount of poits to your total score.</p>
-			<p>Match your score to the random number to win!</p>
-			<hr class="my-4">
-			<p>The gem values with change after each win or loss.</p>
-			<p>Good Luck!</p>
-			<hr class="my-4">
-		</div>
-		</div>
-	</div>
+  <div class="jumbotron">
+    <div class="container text-center">
+    <h1 class="display-3">Collect the Gems!!</h1>
+    <div class="lead" id="instructions">Instructions:
+      <hr class="my-4">
+      <p>You'll be given a random number to start the game.</p>
+      <hr class="my-4">
+      <p>By clicking on a gem you will add a specific amount of poits to your total score.</p>
+      <p>Match your score to the random number to win!</p>
+      <hr class="my-4">
+      <p>The gem values with change after each win or loss.</p>
+      <p>Good Luck!</p>
+      <hr class="my-4">
+    </div>
+    </div>
+  </div>
 
-	<div class="container">
-		<div class="row" id="gemBox">
-		<div id="gems" class="col-sm-12"></div>
-		</div>
-	</div>
-		
-		<div class="row" id="bottom">
-			
-			<div class="col-sm-2"></div>
-			<div class="col-sm-4">
-			<div class="left">
-				<p class="box">Random Number:
-					<br>
-					<h1><span id="number">0</span></h1>
-				</p>
+  <div class="container">
+    <div class="row" id="gemBox">
+    <div id="gems" class="col-sm-12"></div>
+    </div>
+  </div>
+    
+    <div class="row" id="bottom">
+      
+      <div class="col-sm-2"></div>
+      <div class="col-sm-4">
+      <div class="left">
+        <p class="box">Random Number:
+          <br>
+          <h1><span id="number">0</span></h1>
+        </p>
 
-				<p class="box">Your Total Score:
-					<br>
-					<h1><span id="totalScore"></span></h1>
-				</p>
-			</div>
-			</div>
+        <p class="box">Your Total Score:
+          <br>
+          <h1><span id="totalScore"></span></h1>
+        </p>
+      </div>
+      </div>
 
-			<div class="col-sm-2"></div>
-			<div class="col-sm-4">
-			<div class="right">
-				<p class="box">Wins:
-					<br>
-					<span id="wins"><h1></h1></span>
-				</p>
-				<p class="box">Losses:
-					<br>
-					<span id="losses"><h1></h1></span>
-				</p>		
-			</div>
-			</div>
-		</div>
-
-
+      <div class="col-sm-2"></div>
+      <div class="col-sm-4">
+      <div class="right">
+        <p class="box">Wins:
+          <br>
+          <span id="wins"><h1></h1></span>
+        </p>
+        <p class="box">Losses:
+          <br>
+          <span id="losses"><h1></h1></span>
+        </p>    
+      </div>
+      </div>
+    </div>
 
 
+  <script
+    src="https://code.jquery.com/jquery-3.1.1.js"
+    integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA="
+    crossorigin="anonymous"
+  ></script>
 
-  </script>
+  <script type="text/javascript" src="assets/javascript/game.js"></script>
 
 </body>
 </html>
